@@ -15,7 +15,10 @@
 
 ## Emulador
 - Resolución de BlueStacks: 1280×720, a 240 DPI.
-- Lo que manda es lo que devuelve `adb exec-out screencap`, no el tamaño de la ventana en el escritorio. Se verifica en la Fase 1.
+- Lo que manda es lo que devuelve `adb exec-out screencap`, no el tamaño de la ventana en el escritorio.
+- Medido en la Fase 1: `wm size` devuelve 1280x720 (orientación natural) y `wm density` devuelve 240.
+- **Las capturas son de 720×1280 (vertical). Ese es el sistema de coordenadas del bot.**
+- Serial de ADB: `127.0.0.1:5555`. También aparece `emulator-5554`, que es el mismo emulador, así que siempre se usa `-s`.
 - Esta configuración no se cambia una vez que haya plantillas de imagen (Fase 3).
 
 ## Enfoque técnico
